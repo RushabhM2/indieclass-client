@@ -17,6 +17,7 @@ import { updatePaymentDB } from '../store/actions';
 import { useSafeArea } from 'react-native-safe-area-context';
 
 function Payments({ navivation }) {
+  const STRIPE_KEY = process.env.STRIPE_LIVE_PUBLISHABLE_KEY || STRIPE_LIVE_PUBLISHABLE_KEY
   const dispatch = useDispatch();
   const data = useSelector((state) => state);
   const { user } = data;
@@ -49,7 +50,7 @@ function Payments({ navivation }) {
         // Use the correct Content Type to send data to Stripe
         'Content-Type': 'application/x-www-form-urlencoded',
         // Use the Stripe publishable key as Bearer
-        Authorization: `Bearer ${STRIPE_LIVE_PUBLISHABLE_KEY}`,
+        Authorization: `Bearer ${STRIPE_KEY}`,
       },
       // Use a proper HTTP method
       method: 'post',

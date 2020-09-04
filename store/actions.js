@@ -1,4 +1,5 @@
-const SERVER_URL = 'http://10.0.2.2:3001';
+import { DATABASE_URL } from './../env'
+const SERVER_URL = process.env.DATABASE_URL || DATABASE_URL
 
 import {
   ADD_MYCLASS,

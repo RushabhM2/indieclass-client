@@ -38,7 +38,7 @@ function AuthSignin({ setUser, getMyClassesDB, getTeacherClassesDB }) {
   const signIn = async () => {
     try {
       const result = await Google.logInAsync({
-        androidClientId: ANDROID_CLIENT_ID,
+        androidClientId: process.env.ANDROID_CLIENT_ID || ANDROID_CLIENT_ID,
         scopes: ['profile', 'email'],
       });
       if (result.type === 'success') {

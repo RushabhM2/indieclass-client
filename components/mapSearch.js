@@ -7,7 +7,7 @@ function MapSearch({ setPlaceID }) {
     <GooglePlacesAutocomplete
       listViewDisplayed={false}
       query={{
-        key: KEY,
+        key: process.env.KEY || KEY,
         language: 'en',
       }}
       onFail={(error) => console.error(error)}

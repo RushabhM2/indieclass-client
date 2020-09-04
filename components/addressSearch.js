@@ -2,14 +2,13 @@ import React from 'react';
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 import { setExploreCategory } from '../store/actions';
 import { KEY } from './../env';
-// const KEY = 'AIzaSyD4vvYE5KA-Rdc_To-YbupkG4RAZTJbnxA';
 
 function AddressSearch({ setAddress, updateGoogleID }) {
   return (
     <GooglePlacesAutocomplete
       listViewDisplayed={false}
       query={{
-        key: KEY,
+        key: process.env.KEY || KEY,
         language: 'en',
       }}
       onFail={(error) => console.error(error)}
