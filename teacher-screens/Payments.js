@@ -17,7 +17,7 @@ import { updatePaymentDB } from '../store/actions';
 import { useSafeArea } from 'react-native-safe-area-context';
 
 function Payments({ navivation }) {
-  const STRIPE_KEY = process.env.REACT_APP_STRIPE_LIVE_PUBLISHABLE_KEY, // || STRIPE_LIVE_PUBLISHABLE_KEY
+  const STRIPE_KEY = process.env.REACT_APP_STRIPE_LIVE_PUBLISHABLE_KEY; // || STRIPE_LIVE_PUBLISHABLE_KEY
   const dispatch = useDispatch();
   const data = useSelector((state) => state);
   const { user } = data;
