@@ -9,7 +9,7 @@ import {
   Image,
 } from 'react-native';
 import * as Google from 'expo-google-app-auth';
-import { ANDROID_CLIENT_ID } from './../env';
+// import { ANDROID_CLIENT_ID } from './../env';
 import apiServiceJWT from '../ApiService/authService';
 import { useDispatch, useSelector, connect } from 'react-redux';
 import {
@@ -38,7 +38,7 @@ function AuthSignin({ setUser, getMyClassesDB, getTeacherClassesDB }) {
   const signIn = async () => {
     try {
       const result = await Google.logInAsync({
-        androidClientId: process.env.ANDROID_CLIENT_ID || ANDROID_CLIENT_ID,
+        androidClientId: process.env.REACT_APP_ANDROID_CLIENT_ID, // || ANDROID_CLIENT_ID,
         scopes: ['profile', 'email'],
       });
       if (result.type === 'success') {

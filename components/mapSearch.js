@@ -1,13 +1,13 @@
 import React from 'react';
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
-import { KEY } from './../env'
+// import { KEY } from './../env'
 
 function MapSearch({ setPlaceID }) {
   return (
     <GooglePlacesAutocomplete
       listViewDisplayed={false}
       query={{
-        key: process.env.KEY || KEY,
+        key: process.env.REACT_APP_KEY,// || KEY,
         language: 'en',
       }}
       onFail={(error) => console.error(error)}
