@@ -7,9 +7,8 @@ We keep the API functions that interface with the server in this file
 
 */
 
-// import { DATABASE_URL } from './../env'
-
-const BASE_URL = process.env.REACT_APP_DATABASE_URL // || DATABASE_URL
+import Constants from 'expo-constants';
+const BASE_URL = Constants.manifest.extra.databaseURL;
 
 export const getTeacher = async (classId, teacher, setTeacher) => {
   return fetch(`${BASE_URL}/class/${classId}`)

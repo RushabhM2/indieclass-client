@@ -1,5 +1,5 @@
-// import { DATABASE_URL } from './../env'
-const SERVER_URL = process.env.REACT_APP_DATABASE_URL // || DATABASE_URL
+import Constants from 'expo-constants';
+const SERVER_URL = Constants.manifest.extra.databaseURL;
 
 import {
   ADD_MYCLASS,

@@ -23,7 +23,9 @@ import MyClasses from './screens/MyClasses';
 import Profile from './screens/Profile';
 import AuthSignin from './screens/Signin';
 import MapView from './components/mapView';
-
+import Constants from 'expo-constants'
+console.log('.env variables', Constants.manifest.extra);
+console.log('app database URL', process.env.REACT_APP_DATABASE_URL);
 export default function App() {
   return (
     <Provider store={store}>
