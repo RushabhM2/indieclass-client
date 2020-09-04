@@ -96,18 +96,6 @@ export default function CalendarView({ myClasses, handleClassSelect }) {
         </View>
       )}
     </View>
-    // <View style={styles.fullList}>
-    //   <View style={styles.headerContainer}>
-    //     <Text style={styles.header}>The full list of classes you've registered for are</Text>
-    //   </View>
-    //   <FlatList
-    //     data={myClasses}
-    //     keyExtractor={(item) => item.class_id}
-    //     renderItem={({ item }) => (
-    //       <ClassItem item={item} handleClassSelect={handleClassSelect} />
-    //     )}
-    //   />
-    // </View>
   );
 }
 const styles = StyleSheet.create({
